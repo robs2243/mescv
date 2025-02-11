@@ -33,6 +33,12 @@ public class HelloController {
     private Label welcomeText;
 
     @FXML
+    private Button button;
+
+    @FXML
+    private ImageView currentFrame;
+
+    @FXML
     protected void onHelloButtonClick() {
         welcomeText.setText("Welcome to JavaFX Application!");
     }
@@ -109,7 +115,8 @@ public class HelloController {
                 // if the frame is not empty, process it
                 if (!frame.empty())
                 {
-                    Imgproc.cvtColor(frame, frame, Imgproc.COLOR_BGR2GRAY);
+                    //Imgproc.cvtColor(frame, frame, Imgproc.COLOR_BGR2GRAY);
+                    //Imgproc.cvtColor(frame, frame, Imgproc.COLOR_BGR2RGB);
                 }
 
             }
@@ -134,7 +141,7 @@ public class HelloController {
             {
                 // stop the timer
                 this.timer.shutdown();
-                this.timer.awaitTermination(33, TimeUnit.MILLISECONDS);
+                this.timer.awaitTermination(20, TimeUnit.MILLISECONDS);
             }
             catch (InterruptedException e)
             {
