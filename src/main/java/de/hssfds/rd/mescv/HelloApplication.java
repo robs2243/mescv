@@ -21,7 +21,8 @@ public class HelloApplication extends Application {
 
     public static void main(String[] args) {
         // load the native OpenCV library
-        OpenCV.loadShared();
+        //OpenCV.loadShared();
+        OpenCV.loadLocally();
         launch();
     }
 }
